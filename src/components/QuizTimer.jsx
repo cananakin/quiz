@@ -5,7 +5,6 @@ export default function QuizTimer({timer, onTimeout, mode}) {
     
     useEffect(() => {
         const timeout = setTimeout(() => {
-            console.log(timer);
             onTimeout(null);
         }, timer);
 
@@ -16,7 +15,6 @@ export default function QuizTimer({timer, onTimeout, mode}) {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            console.log(timer);
             setIsLoading(prev => prev - 100);
         },100);
         return () => {
